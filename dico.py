@@ -27,7 +27,6 @@ def syno(word):
 def anto(word):
 	url = "http://www.antonyme.org/antonyme/" + word
 	erreur="Aucun résultat"
-	print("test")
 	page = requests.get(url)
 	soup = BeautifulSoup(page.content, 'html.parser')
 	text=soup.ul.get_text()
